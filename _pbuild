@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<pbuild>
+  <preset name="aarch64">
+    <repo>obs://SUSE:SLE-15-SP4:Update:Products:Micro53/standard</repo>
+    <arch>aarch64</arch>
+  </preset>
+
+  <preset name="x86_64">
+    <repo>obs://SUSE:SLE-15-SP4:Update:Products:Micro53/standard</repo>
+    <arch>x86_64</arch>
+  </preset>
+
+  <preset name="cross_aarch64" default>
+    <obs>https://api.opensuse.org/public</obs>
+    <config>obs://SUSE:SLE-15-SP4:Update:Products:Micro53/standard</config>
+    <hostrepo>https://download.opensuse.org/repositories/Geckito:/SDK:/Main/15.4/</hostrepo>
+<!--
+    <hostrepo>https://download.opensuse.org/update/leap/15.4/oss/</hostrepo>
+    <hostrepo>https://download.opensuse.org/update/leap/15.4/backports/</hostrepo>
+    <hostrepo>https://download.opensuse.org/update/leap/15.4/sle/</hostrepo>
+-->
+    <hostrepo>https://download.opensuse.org/distribution/leap/15.4/repo/oss/</hostrepo>
+    <arch>aarch64</arch>
+  </preset>
+</pbuild>

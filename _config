@@ -1,0 +1,24 @@
+# Avoid -mini packages as they are not supposed to be part of the image
+Prefer: libudev udev systemd
+Prefer: !libudev-mini1 !udev-mini !systemd-mini !libsystemd0-mini
+Prefer: -ghc-bootstrap
+
+# workaround for incomplete 15.4 shipment
+Support: !rpmlint-Factory
+
+# cross architecture build settings
+%if "%_repository" == "cross_aarch64"
+HostArch: x86_64
+Target: aarch64-suse-linux
+
+# cross compiler and helper tooling
+#Required: cross-aarch64-aaa_base
+#Required: cross-aarch64-gcc11
+OnlyNative: cross-aarch64-aaa_base
+OnlyNative: cross-aarch64-gcc11
+
+# the checks are mostly not valid for cross build
+Support: !post-build-checks
+
+Substitute: system-packages:kiwi-image python3-kiwi createrepo_c tar qemu-linux-user qemu-tools gptfdisk kpartx dosfstools python3-kiwi_crossprepare_plugin build-initvm-x86_64
+%endif
