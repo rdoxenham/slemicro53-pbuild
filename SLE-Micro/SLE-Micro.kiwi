@@ -153,7 +153,7 @@
     <package name="i2c-tools"/>
     <package name="ignition"/>
     <package name="ignition-dracut-grub2"/>
-    <!--<package name="imx8mp-firmware"/>-->
+    <package name="imx8mp-firmware"/>
     <package name="iproute2"/>
     <package name="ipset"/>
     <package name="iptables"/>
@@ -256,7 +256,6 @@
     <package name="libfido2-udev"/>
     <package name="libfmt8"/>
     <package name="libfreebl3"/>
-    <package name="libfreebl3-hmac"/>
     <package name="libfreetype6"/>
     <package name="libfuse2"/>
     <package name="libfuse3-3"/>
@@ -349,7 +348,6 @@
     <package name="libsnappy1"/>
     <package name="libsodium23"/>
     <package name="libsoftokn3"/>
-    <package name="libsoftokn3-hmac"/>
     <package name="libssh2-1"/>
     <package name="libtasn1"/>
     <package name="libtasn1-6"/>

@@ -6,6 +6,8 @@ Prefer: -ghc-bootstrap
 # workaround for incomplete 15.4 shipment
 Support: !rpmlint-Factory
 
+Support: vim less strace
+
 # cross architecture build settings
 %if "%_repository" == "cross_aarch64"
 HostArch: x86_64
