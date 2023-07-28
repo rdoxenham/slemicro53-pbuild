@@ -15,11 +15,9 @@
     <config>obs://SUSE:SLE-15-SP4:Update:Products:Micro53/standard</config>
     <hostrepo>https://download.opensuse.org/repositories/home:/adrianSuSE:/branches:/openSUSE:/Tools/15.4/</hostrepo>
     <hostrepo>https://download.opensuse.org/repositories/Geckito:/SDK:/Main/15.4/</hostrepo>
-<!--
     <hostrepo>https://download.opensuse.org/update/leap/15.4/oss/</hostrepo>
     <hostrepo>https://download.opensuse.org/update/leap/15.4/backports/</hostrepo>
     <hostrepo>https://download.opensuse.org/update/leap/15.4/sle/</hostrepo>
--->
     <hostrepo>https://download.opensuse.org/distribution/leap/15.4/repo/oss/</hostrepo>
     <arch>aarch64</arch>
   </preset>
