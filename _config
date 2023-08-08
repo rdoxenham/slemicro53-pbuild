@@ -9,16 +9,17 @@ Support: !rpmlint-Factory
 Support: vim less strace
 
 # cross architecture build settings
-%if "%_repository" == "cross_aarch64"
 HostArch: x86_64
 Target: aarch64-suse-linux
 
 # our basic cross tool chain
+%if "%_repository" == "cross_aarch64"
 Required: cross-aarch64-gcc11
-Required: cross-aarch64-glibc
-Required: cross-aarch64-aaa_base
-OnlyNative: cross-aarch64-gcc11
+Support: cross-aarch64-glibc
+Support: cross-aarch64-aaa_base
 OnlyNative: cross-aarch64-aaa_base
+OnlyNative: cross-aarch64-glibc
+OnlyNative: cross-aarch64-gcc11
 OnlyNative: makeinfo
 
 AlsoNative: qt6-base-common-devel
@@ -41,11 +42,6 @@ Ignore: rpmlint-mini rpmlint-Factory
 Support: !brp-check-suse
 Support: !post-build-checks
 
-# cross compiler and helper tooling
-#Required: cross-aarch64-aaa_base
-#Required: cross-aarch64-gcc11
-OnlyNative: cross-aarch64-aaa_base
-OnlyNative: cross-aarch64-gcc11
-
 Substitute: system-packages:kiwi-image python3-kiwi createrepo_c tar qemu-linux-user qemu-tools gptfdisk kpartx dosfstools python3-kiwi_crossprepare_plugin build-initvm-x86_64
+Substitute: build-packages:kiwi -cross-aarch64-gcc11 -cross-aarch64-glibc -cross-aarch64-aaa_base
 %endif
